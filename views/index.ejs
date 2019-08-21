@@ -1,0 +1,36 @@
+<% include head %>
+
+<% include navbar %>
+
+  <body>
+    <div class = "container">
+        <div class = "row">
+          <div class = "col col-12">
+              <h1>Movies Now Playing</h1>
+          </div>
+              <!-- We have an array, its parsed data -->
+              <% parsedData.forEach((movie, i) =>{  %>
+                  <div class= "col col-3-lg-3 col-md-4 col-xs-12 poster">
+                    <a href="/movie/<%= movie.id %>">
+                    <img src="<%= imageBaseUrl + movie.poster_path %>" />
+                    </a>
+                    <p class = 'title'><strong>
+                    <%= movie.title %>
+                  </strong>
+                    </p>
+                  </div>
+                <% }) %>
+
+          </div>
+
+
+        </div>
+
+
+
+
+    
+    
+
+  </body>
+</html>
